@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bits/stdc++.h>
 #include<vector>
 using namespace std;
 
@@ -109,17 +110,28 @@ using namespace std;
 // <<<<<<<<<<<<<<--------------------KADANE's ALGORITHM:-------->>>>>>>>>>>>>>>
 
 int main(){
-    int arr[]={1,2,3,4,5};
+    int arr[]={1,2,-3,4,5};
     int sz=sizeof(arr)/sizeof(arr[0]);
     // for printing all subrrays
-    for(int start=0;start<sz;start++){
-        for(int end=start;end<sz;end++){
-            for(int i=start;i<end;i++){
-                cout<<arr[i];
-            }
-            cout<<" ";
+    // for(int start=0;start<sz;start++){
+    //     for(int end=start;end<sz;end++){
+    //         for(int i=start;i<end;i++){
+    //             cout<<arr[i];
+    //         }
+    //         cout<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // MAX SUBRRAY SUM (BRUTE FORCE SOLN)
+    int maxsum=INT_MIN;
+    for(int st=0;st<sz;st++){
+        int currsum=0;
+        for(int end=st;end<sz;end++){
+            currsum+=arr[end];
+            maxsum=max(currsum,maxsum);
         }
-        cout<<endl;
     }
+    cout<<"maxsubarray sum is : "<<maxsum<<endl;
     return 0;
 }
