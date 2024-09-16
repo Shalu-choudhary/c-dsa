@@ -110,7 +110,7 @@ using namespace std;
 // <<<<<<<<<<<<<<--------------------KADANE's ALGORITHM:-------->>>>>>>>>>>>>>>
 
 int main(){
-    int arr[]={1,2,-3,4,5};
+    int arr[]={3,-4,5,4,-1,7,-8};
     int sz=sizeof(arr)/sizeof(arr[0]);
     // for printing all subrrays
     // for(int start=0;start<sz;start++){
@@ -124,14 +124,27 @@ int main(){
     // }
 
     // MAX SUBRRAY SUM (BRUTE FORCE SOLN)
+    // int maxsum=INT_MIN;
+    // for(int st=0;st<sz;st++){
+    //     int currsum=0;
+    //     for(int end=st;end<sz;end++){
+    //         currsum+=arr[end];
+    //         maxsum=max(currsum,maxsum);
+    //     }
+    // }
+    // cout<<"maxsubarray sum is : "<<maxsum<<endl;
+    // return 0;
+
+    // KADANE'S ALGO
     int maxsum=INT_MIN;
-    for(int st=0;st<sz;st++){
-        int currsum=0;
-        for(int end=st;end<sz;end++){
-            currsum+=arr[end];
-            maxsum=max(currsum,maxsum);
+    int currsum=0;
+    for(int i=0;i<sz;i++){
+        currsum+=arr[i];
+        maxsum=max(currsum,maxsum);
+        if(currsum<0){
+            currsum=0;
         }
     }
-    cout<<"maxsubarray sum is : "<<maxsum<<endl;
+    cout<<"max subarray sum is : "<<maxsum;
     return 0;
 }
