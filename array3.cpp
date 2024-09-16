@@ -78,30 +78,48 @@ using namespace std;
 
 // Find out the MAJORITY ELEMENT in an array (Moon's voting algo  [OPTIMAL SOL] )
 
-int majorityElem(vector<int>vec){
-    int cnt=0;
-    int el;
-    for(int i=0;i<vec.size();i++){
-        if(cnt==0){
-            cnt++;
-            el=vec[i];
-        }
-        else if(vec[i]==el){
-            cnt++;
-        }
-        else{
-            cnt--;
-        }
+// int majorityElem(vector<int>vec){
+//     int cnt=0;
+//     int el;
+//     for(int i=0;i<vec.size();i++){
+//         if(cnt==0){
+//             cnt++;
+//             el=vec[i];
+//         }
+//         else if(vec[i]==el){
+//             cnt++;
+//         }
+//         else{
+//             cnt--;
+//         }
        
-    }
-    int count1=0;
-    for(int i=0;i<vec.size();i++){
-        if(vec[i]==el){
-            count1++;
+//     }
+//     int count1=0;
+//     for(int i=0;i<vec.size();i++){
+//         if(vec[i]==el){
+//             count1++;
+//         }
+//         if(count1>(vec.size()/2)){
+//             return el;
+//         }
+//     }
+//     return -1;
+// }
+
+// <<<<<<<<<<<<<<--------------------KADANE's ALGORITHM:-------->>>>>>>>>>>>>>>
+
+int main(){
+    int arr[]={1,2,3,4,5};
+    int sz=sizeof(arr)/sizeof(arr[0]);
+    // for printing all subrrays
+    for(int start=0;start<sz;start++){
+        for(int end=start;end<sz;end++){
+            for(int i=start;i<end;i++){
+                cout<<arr[i];
+            }
+            cout<<" ";
         }
-        if(count1>(vec.size()/2)){
-            return el;
-        }
+        cout<<endl;
     }
-    return -1;
+    return 0;
 }
