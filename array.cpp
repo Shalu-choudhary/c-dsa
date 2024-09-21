@@ -78,7 +78,6 @@ using namespace std;
 // int issorted(int arr[6]){
 //     for(int i=1;i<6;i++){
 //         if(arr[i]>arr[i-1]){
-            
 //         }
 //         else{
 //             return false;
@@ -91,7 +90,6 @@ using namespace std;
 // cout<<issorted(arr);
 //     return 0;
 // }
-
 // int issorted(int n, vector<int >arr){    by vector
 //       for(int i=1;i<6;i++){
 //         if(arr[i]>arr[i-1]){
