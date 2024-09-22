@@ -38,6 +38,6 @@ int bintodec(int binaryno){
 }
 int main(){
     int binaryno=110;
-    cout<<bintodec(binaryno);
+    cout<<"the conversion is from binary to decimal is: "<<bintodec(binaryno)<<endl;
     return 0;
 }

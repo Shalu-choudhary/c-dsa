@@ -142,11 +142,10 @@ int  fun(int n){
     }
     int last=fun(n-1);
     int seclast=fun(n-2);
-
     return last+seclast;
 }
 int main(){
 int n=4;
-cout<<"the no at position in the fib series is :"<<fun(n);
+cout<<"the no at position in the fib series is :"<<fun(n)<<endl;
     return 0;
 }
