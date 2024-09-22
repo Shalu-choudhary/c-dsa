@@ -54,3 +54,23 @@ Given an array of integers, the task is to find the majority element and return 
 Example 1:
 Input: [3, 3, 4, 2, 4, 4, 2, 4, 4]
 Output: 4*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+vector<int>movezero(vector<int> nums){
+    int j=-1;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]==0){
+            j=1;
+            break;
+        }
+    }
+    for(int i=j+1;i<nums.size();i++){
+        if(nums[i]!=0){
+            swap(nums[i],nums[j]);
+            j++;
+        }
+    }
+}
