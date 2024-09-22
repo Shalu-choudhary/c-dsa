@@ -58,7 +58,7 @@ Output: 4*/
 #include<iostream>
 #include<vector>
 using namespace std;
-
+// move the zeroes at the end 
 vector<int>movezero(vector<int> nums){
     int j=-1;
     for(int i=0;i<nums.size();i++){

@@ -72,18 +72,14 @@ using namespace std;
 // // prime no. , print all prime no 2 to n, fibonacci series
 
 bool isprime(int n){
-    
     if(n<=1){
         return false;
     }
-
     for(int i=2;i<n;i++){
         if(n%i==0){
-             return false;
-           
+             return false;  
         }
-        return true;
-        
+        return true; 
     }
 }
 
@@ -91,9 +87,7 @@ int main(){
     if(isprime(5)){
         cout<<" the no is a prime no !"<<endl;
     }else{
-        cout<<"not prime "<<endl;
+        cout<<"not prime : "<<endl;
     }
- 
-
     return 0;
 }
