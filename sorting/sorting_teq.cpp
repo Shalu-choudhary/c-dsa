@@ -12,6 +12,7 @@ void selection_sort(int arr[],int n){
         arr[i]=temp;
     }
 }
+
 void bubble_Sort(int arr[], int n){
     for(int i=n-1;i>=0;i--){
         for(int j=0;j<=i-1;j++){
